@@ -1,10 +1,10 @@
 import React from "react";
 import { Form, Select } from "antd";
 
-function SelectField({ name, label, options, onChange }) {
+function SelectField({ name, label, options, onChange, disable }) {
   return (
     <Form.Item name={name} label={label} rules={[{ required: true, message: `Please select your ${label}` }]}>
-      <Select placeholder={`Select your ${label}`} onChange={onChange}>
+      <Select placeholder={`Select your ${label}`} onChange={onChange} disabled={disable}>
         {options.map((option) => (
           <Select.Option key={option.value} value={option.value}>
             {option.label}

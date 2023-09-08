@@ -13,8 +13,8 @@ function UploadField({ name, label, handleUpload }) {
         {
           required: true,
           message: "Please upload a certificate",
-          validator: (_, file) => {
-            return file && file.length > 0 ; 
+          validator: (_, fileList) => {
+            return fileList && fileList.length > 0;
           },
         },
       ]}

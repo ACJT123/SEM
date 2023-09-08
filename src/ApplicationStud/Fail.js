@@ -1,10 +1,10 @@
 import {Result, Button} from "antd";
 
 
-function Success({backToHome, title, subTitle}) {
+function Fail({backToHome, title, subTitle}) {
     return (
         <Result
-        status="success"
+        status="warning"
         title={title}
         subTitle={subTitle}
         extra={[
@@ -16,4 +16,4 @@ function Success({backToHome, title, subTitle}) {
     );
     }
 
-export default Success;
+export default Fail;
